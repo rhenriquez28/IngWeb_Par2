@@ -10,7 +10,7 @@
       <input type="text" name="username" value="" required><br>
       <label for="">Password:</label>
       <input type="password" name="password" value="" required><br>
-      <button type="submit" name="enviar"></button>
+      <button type="submit" name="enviar">Enviar</button>
     </form>
   </body>
 </html>
