@@ -1,6 +1,7 @@
-<?php require_once("Transaccion.php")
-$pTran = new Transacion();
-$pTran-> setMontoCapt($_POST["capital"]); ?>
+<?php require 'Transaccion.php';
+session_start();
+$pTran = $_SESSION["montoCapt"];
+?>
 <!DOCTYPE html>
 <html>
   <head>

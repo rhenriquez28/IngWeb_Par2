@@ -1,3 +1,6 @@
+<?php require 'Transaccion.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,9 +18,27 @@
         <th>Monto</th>
         <th>Saldo Capital</th>
       </thead>
-      <?php if ($new_tran==true ) {
-        # code...
-      } ?>
+      <?php
+        $pReport = $_SESSION["montoCapt"];
+        $i=0;
+        foreach ($pReport-> getReporte() as $key) {
+          echo "<tr>";
+          echo "<td>";
+          echo ($i+1);
+          echo "</td>";
+          echo "<td>";
+          echo $key[0];
+          echo "</td>";
+          echo "<td>";
+          echo "$".$key[1];
+          echo "</td>";
+          echo "<td>";
+          echo "$".$key[2];
+          echo "</td>";
+          echo "</tr>";
+          $i++;
+        }
+        ?>
     </table>
     <br>
     <br>
@@ -30,7 +51,11 @@
         <th>Saldo Capital</th>
       </thead>
       <tr>
-        <td></td>
+        <td><?php echo "$".$pReport-> getAmountDep(); ?></td>
+        <td><?php echo "$".$pReport-> getAmountRet(); ?></td>
+        <td><?php echo "$".$pReport-> getAmountTransf(); ?></td>
+        <td><?php echo "$".$pReport-> getAmountInt(); ?></td>
+        <td><?php echo "$".$pReport-> getMontoCapt(); ?></td>
       </tr>
     </table>
   </body>

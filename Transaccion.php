@@ -1,34 +1,42 @@
 <?php
-class Transacion
+class Transaccion
 {
+  private $contGen = 0;
   private $contRet = 0;
   private $contTransf = 0;
   private $montoCapt = 0;
+  private $captInicial = 0;
   private $amountDep = 0;
+  private $contDep = 0;
   private $amountTransf = 0;
   private $amountRet = 0;
   private $amountInt = 0;
-  private $Reporte = array('' => , );
+  private $Reporte = array();
 
 
-  public function Deposito($amount){
-    $montoCapt = $montoCapt + $amount + ($amount * 0.0125);
-    $amountDep = $amountDep + $amount;
-    $amountInt = $amountInt + ($amount * 0.0125);
+  public function Deposito($amount)
+  {
+    $this->montoCapt = $this->montoCapt + $amount + ($amount * 0.0125);
+    $this->amountDep = $this->amountDep + $amount;
+    $this->amountInt = $this->amountInt + ($amount * 0.0125);
+    $this->contDep++;
+    $this->Reporte=array_push($this->Reporte, array("Deposito", $this->amountDep, $this->montoCapt));
   }
 
   public function Retiro($amount)
   {
-    $montoCapt = $montoCapt - $amount;
-    $amountRet = $amountRet + $amount;
-    $contRet++;
+    $this->montoCapt = $this->montoCapt - $amount;
+    $this->amountRet = $this->amountRet + $amount;
+    $this->contRet++;
+    $this->Reporte=array_push($this->Reporte, array("Retiro", $this->amountRet, $this->montoCapt));
   }
 
   public function Transferencia($amount)
   {
-    $montoCapt = $montoCapt - $amount;
-    $amountTransf = $amountTransf + $amount;
-    $contTransf++;
+    $this->montoCapt = $this->montoCapt - $amount;
+    $this->amountTransf = $this->amountTransf + $amount;
+    $this->contTransf++;
+    $this->Reporte=array_push($this->Reporte, array("Transferencia", $this->amountTransf, $this->montoCapt));
   }
 
   public function getMontoCapt(){
@@ -85,6 +93,30 @@ public function getAmountInt(){
 
 public function setAmountInt($amountInt){
   $this->amountInt = $amountInt;
+}
+
+public function getReporte(){
+		return $this->Reporte;
+	}
+
+	public function setReporte($Reporte){
+		$this->Reporte = $Reporte;
+	}
+
+  public function getContDep(){
+  return $this->contDep;
+}
+
+public function setContDep($contDep){
+  $this->contDep = $contDep;
+}
+
+public function getCaptInicial(){
+  return $this->captInicial;
+}
+
+public function setCaptInicial($captInicial){
+  $this->captInicial = $captInicial;
 }
 }
 

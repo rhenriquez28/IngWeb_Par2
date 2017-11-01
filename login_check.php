@@ -1,3 +1,5 @@
+<?php require 'Transaccion.php';
+$pTran = new Transaccion(); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,11 +8,12 @@
   </head>
   <body>
     <?php
-    if (isset($_POST["username"]&& isset($_POST["password"]))) {
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
       if ($_POST["username"]=="root" && $_POST["password"]=="1234") {
         echo "<p>Bienvenido</p><br>";
         echo "<p>Seleccione cual va a ser su monto capital inicial:</p><br>";
-        echo '<form class="" action="login_check.php" method="post">';
+        echo '<form class="" action="Tran_process.php" method="post">';
+        echo '<input type="hidden" name="tran" value="0"><br>';
         echo '<label for="">Monto Capital:</label>';
         echo '<input type="number" name="capital" value="100" min="100" required><br>';
         echo '<button type="submit" name="siguiente">Siguiente</button>';
