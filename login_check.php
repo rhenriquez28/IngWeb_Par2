@@ -14,6 +14,7 @@
         echo '<label for="">Monto Capital:</label>';
         echo '<input type="number" name="capital" value="100" min="100" required><br>';
         echo '<button type="submit" name="siguiente">Siguiente</button>';
+        echo '</form>';
       }
     }else {
     }
