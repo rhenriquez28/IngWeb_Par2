@@ -20,23 +20,14 @@ session_start();
       </thead>
       <?php
         $pReport = $_SESSION["montoCapt"];
-        $i=0;
-        foreach ($pReport-> getReporte() as $key) {
+        $Reporte = $pReport-> getReporte();
+        for ($i=0; $i < sizeof($Reporte); $i++) {
           echo "<tr>";
-          echo "<td>";
-          echo ($i+1);
-          echo "</td>";
-          echo "<td>";
-          echo $key[0];
-          echo "</td>";
-          echo "<td>";
-          echo "$".$key[1];
-          echo "</td>";
-          echo "<td>";
-          echo "$".$key[2];
-          echo "</td>";
+          echo "<td>".($i+1)."</td>";
+          echo "<td>".$Reporte[$i][0]."</td>";
+          echo "<td>$".$Reporte[$i][1]."</td>";
+          echo "<td>$".$Reporte[$i][2]."</td>";
           echo "</tr>";
-          $i++;
         }
         ?>
     </table>

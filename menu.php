@@ -15,6 +15,10 @@ $pTran = $_SESSION["montoCapt"];
       <li><a href="retire.php">Retiro</a></li>
       <li><a href="transferencia.php">Transferencia</a></li>
       <li><a href="report.php">Reporte</a></li>
+      <li><form class="" action="Tran_process.php" method="post">
+        <input type="hidden" name="tran" value="4">
+        <button type="submit" name="button">Cerrar sesion</button>
+      </form></li>
     </ul>
   </body>
 </html>

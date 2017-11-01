@@ -1,4 +1,5 @@
 <?php require 'Transaccion.php';
+session_start();
 $pTran = new Transaccion(); ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +20,7 @@ $pTran = new Transaccion(); ?>
         echo '<button type="submit" name="siguiente">Siguiente</button>';
         echo '</form>';
       }
+      $_SESSION["montoCapt"]=$pTran;
     }
      ?>
   </body>

@@ -11,7 +11,7 @@ class Transaccion
   private $amountTransf = 0;
   private $amountRet = 0;
   private $amountInt = 0;
-  private $Reporte = array();
+  public $Reporte = array();
 
 
   public function Deposito($amount)
@@ -20,7 +20,7 @@ class Transaccion
     $this->amountDep = $this->amountDep + $amount;
     $this->amountInt = $this->amountInt + ($amount * 0.0125);
     $this->contDep++;
-    $this->Reporte=array_push($this->Reporte, array("Deposito", $this->amountDep, $this->montoCapt));
+    $this->Reporte[]=array("Deposito", $this->amountDep, $this->montoCapt);
   }
 
   public function Retiro($amount)
@@ -28,7 +28,7 @@ class Transaccion
     $this->montoCapt = $this->montoCapt - $amount;
     $this->amountRet = $this->amountRet + $amount;
     $this->contRet++;
-    $this->Reporte=array_push($this->Reporte, array("Retiro", $this->amountRet, $this->montoCapt));
+    $this->Reporte[]=array("Retiro", $this->amountRet, $this->montoCapt);
   }
 
   public function Transferencia($amount)
@@ -36,8 +36,13 @@ class Transaccion
     $this->montoCapt = $this->montoCapt - $amount;
     $this->amountTransf = $this->amountTransf + $amount;
     $this->contTransf++;
-    $this->Reporte=array_push($this->Reporte, array("Transferencia", $this->amountTransf, $this->montoCapt));
+    $this->Reporte[]=array("Transferencia", $this->amountTransf, $this->montoCapt);
   }
+
+  /*public function Reporte()
+  {
+    # code...
+  }*/
 
   public function getMontoCapt(){
     return $this->montoCapt;
