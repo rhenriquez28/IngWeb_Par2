@@ -5,10 +5,10 @@ session_start();
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Banco ABC - Reporte</title>
   </head>
   <body>
-    <p>Cliente: Root</p>
+    <p>Cliente: Roy Henriquez</p>
     <p>Numero de Cuenta: 01-345-2124-2233</p>
     <br>
     <table>

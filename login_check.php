@@ -4,7 +4,7 @@ $pTran = new Transaccion(); ?>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Banco ABC - Monto Capital</title>
   </head>
   <body>
     <?php
@@ -19,7 +19,6 @@ $pTran = new Transaccion(); ?>
         echo '<button type="submit" name="siguiente">Siguiente</button>';
         echo '</form>';
       }
-    }else {
     }
      ?>
   </body>

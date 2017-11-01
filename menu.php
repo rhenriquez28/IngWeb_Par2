@@ -6,10 +6,10 @@ $pTran = $_SESSION["montoCapt"];
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Banco ABC - Menu</title>
   </head>
   <body>
-    Monto Capital: <?php echo $pTran-> getMontoCapt(); ?>
+    Monto Capital: $<?php echo $pTran-> getMontoCapt(); ?>
     <ul>
       <li><a href="deposit.php">Deposito</a></li>
       <li><a href="retire.php">Retiro</a></li>

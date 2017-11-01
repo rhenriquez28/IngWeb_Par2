@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Banco ABC - Deposito</title>
   </head>
   <body>
     <form class="" action="Tran_process.php" method="post">

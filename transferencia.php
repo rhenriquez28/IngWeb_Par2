@@ -4,7 +4,7 @@ session_start();?>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Banco ABC - Transferencia</title>
   </head>
   <body>
     <?php
