@@ -33,7 +33,7 @@ session_start();?>
       echo '<form class="" action="Tran_process.php" method="post">';
       echo '<input type="hidden" name="tran" value="2"><br>';
       echo '<label for="">Cuanto desea retirar?</label><br>';
-      echo '<input type="number" name="monto" value="" required><br><br>';
+      echo '<input type="texto" name="monto" value="" required><br><br>';
       echo '<button type="submit" name="button">Retirar</button>';
       echo '</form>';
     }elseif ($pRet-> getContRet() >= 4) {

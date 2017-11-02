@@ -29,7 +29,7 @@
     <form class="" action="Tran_process.php" method="post">
       <label for="">Cuanto desea depositar?</label><br>
       <input type="hidden" name="tran" value="1">
-      <input type="number" name="monto" value="" required><br>
+      <input type="text" name="monto" value="" required><br>
       <br>
       <button type="submit" name="button">Depositar</button>
     </form>

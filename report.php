@@ -46,8 +46,8 @@ session_start();
           echo "<tr>";
           echo "<td>".($i+1)."</td>";
           echo "<td>".$Reporte[$i][0]."</td>";
-          echo "<td>$".$Reporte[$i][1]."</td>";
-          echo "<td>$".$Reporte[$i][2]."</td>";
+          echo "<td>$".number_format($Reporte[$i][1], 2)."</td>";
+          echo "<td>$".number_format($Reporte[$i][2], 2)."</td>";
           echo "</tr>";
         }
         ?>
@@ -63,11 +63,11 @@ session_start();
         <th>Saldo Capital</th>
       </thead>
       <tr>
-        <td><?php echo "$".$pReport-> getAmountDep(); ?></td>
-        <td><?php echo "$".$pReport-> getAmountRet(); ?></td>
-        <td><?php echo "$".$pReport-> getAmountTransf(); ?></td>
-        <td><?php echo "$".$pReport-> getAmountInt(); ?></td>
-        <td><?php echo "$".$pReport-> getMontoCapt(); ?></td>
+        <td><?php echo "$".number_format($pReport-> getAmountDep(), 2); ?></td>
+        <td><?php echo "$".number_format($pReport-> getAmountRet(), 2); ?></td>
+        <td><?php echo "$".number_format($pReport-> getAmountTransf(), 2); ?></td>
+        <td><?php echo "$".number_format($pReport-> getAmountInt(), 2); ?></td>
+        <td><?php echo "$".number_format($pReport-> getMontoCapt(), 2); ?></td>
       </tr>
     </table>
   </div>

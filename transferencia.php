@@ -33,7 +33,7 @@ session_start();?>
       echo '<form class="" action="Tran_process.php" method="post">';
       echo '<input type="hidden" name="tran" value="3"><br><br>';
       echo '<label for="">Cuanto desea transferir?</label><br>';
-      echo '<input type="number" name="monto" value="" required><br><br>';
+      echo '<input type="text" name="monto" value="" required><br><br>';
       echo '<label for="">Inserte la cuenta a la que desea transferir:</label><br>';
       echo '<input type="text" name="" value="" required><br><br>';
       echo '<button type="submit" name="button">Transferir</button>';

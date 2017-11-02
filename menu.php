@@ -32,7 +32,7 @@ $pTran = $_SESSION["montoCapt"];
     <p>Cliente: Roy Henriquez</p>
     <p>Numero de Cuenta: 01-345-2124-2233</p>
     <br>
-    Su Monto Capital: $<?php echo $pTran-> getMontoCapt(); ?>
+    Su Monto Capital: $<?php echo number_format($pTran-> getMontoCapt(), 2); ?>
   </div>
   </body>
 </html>
