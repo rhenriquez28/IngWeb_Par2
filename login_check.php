@@ -19,8 +19,14 @@ $pTran = new Transaccion(); ?>
         echo '<input type="number" name="capital" value="100" min="100" required><br>';
         echo '<button type="submit" name="siguiente">Siguiente</button>';
         echo '</form>';
+        $_SESSION["montoCapt"]=$pTran;
+      }else {
+        echo "Ha introducido un usuario o contraseña erronea. Porfavor intentelo denuevo<br>";
+        echo '<form class="" action="Tran_process.php" method="post">';
+        echo '<input type="hidden" name="tran" value="4">';
+        echo '<button type="submit" name="button">Aceptar</button>';
+        echo '</form>';
       }
-      $_SESSION["montoCapt"]=$pTran;
     }
      ?>
   </body>
